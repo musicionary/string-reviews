@@ -14,7 +14,7 @@ export default Ember.Component.extend({
         date: moment()._d,
         title: this.get('title'),
         content: this.get('content'),
-        rating: this.get('rating'),
+        rating: parseInt(this.get('rating')),
         string: this.get('string'),
       };
       console.log(params.date);

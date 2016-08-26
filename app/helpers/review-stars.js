@@ -1,8 +1,7 @@
 import Ember from 'ember';
 
 export function reviewStars(params) {
-  console.log(params);
-  var reviewRating = parseInt(params[0]);
+  var reviewRating = params[0];
   console.log(reviewRating);
   if (reviewRating == 5){
     return "\u266D\u266D\u266D\u266D\u266D";
