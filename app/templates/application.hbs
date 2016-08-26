@@ -1,10 +1,61 @@
-{{#link-to 'index'}}Home{{/link-to}}
-{{#link-to 'admin'}}Admin{{/link-to}}
-{{#link-to 'favorites'}}Favorite Strings{{/link-to}}
-{{#link-to 'viola'}}Viola{{/link-to}}
-{{#link-to 'violin'}}Violin{{/link-to}}
-{{#link-to 'pirastro'}}Pirastro{{/link-to}}
-{{#link-to 'thomastik-infeld'}}Thomastik-Infeld{{/link-to}}
-{{#link-to 'larsen'}}Larsen{{/link-to}}
+<header class="centered-navigation" role="banner">
+  <div class="centered-navigation-wrapper">
+    <a href="javascript:void(0)" class="mobile-logo">
+      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_square.png" alt="Logo image">
+    </a>
+    <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
+    <nav role="navigation">
+      <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
+        <li class="nav-link logo">
+          {{#link-to 'index' class="logo"}}Home{{/link-to}}
+        </li>
+        <li id="js-centered-more" class="nav-link more"><a href="javascript:void(0)">Instrument Type</a>
+          <ul class="submenu">
+            <li>{{#link-to 'viola'}}Viola{{/link-to}}</li>
+            <li>{{#link-to 'violin'}}Violin{{/link-to}}</li>
+          </ul>
+        </li>
+        <li id="js-centered-more" class="nav-link more"><a href="javascript:void(0)">Brand</a>
+          <ul class="submenu">
+            <li>{{#link-to 'pirastro'}}Pirastro{{/link-to}}</li>
+            <li>{{#link-to 'thomastik-infeld'}}Thomastik-Infeld{{/link-to}}</li>
+            <li>{{#link-to 'larsen'}}Larsen{{/link-to}}</li>
+          </ul>
+        </li>
+        <li class="nav-link">{{#link-to 'favorites'}}Favorite Strings{{/link-to}}</li>
+        <li class="nav-link">{{#link-to 'admin'}}Admin{{/link-to}}</li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-{{outlet}}
+<div class="hero">
+  <div class="hero-content">
+  </div>
+</div>
+
+
+<div class="wrapper-for-content-outside-of-footer">
+  {{outlet}}
+</div>
+
+<footer class="footer-2" role="contentinfo">
+    <div class="footer-secondary-links">
+      <ul>
+        <li><a href="javascript:void(0)">Terms and Conditions</a></li>
+        <li><a href="javascript:void(0)">Privacy Policy</a></li>
+      </ul>
+
+      <ul class="footer-social">
+        <li><a href="javascript:void(0)">
+          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/facebook-logo-circle.png" alt="Facebook">
+          </a></li>
+        <li><a href="javascript:void(0)">
+          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/twitter-logo-circle.png" alt="Twitter">
+        </a></li>
+        <li><a href="javascript:void(0)">
+          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/youtube-logo-circle.png" alt="YouTube">
+        </a></li>
+      </ul>
+    </div>
+</footer>

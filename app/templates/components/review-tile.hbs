@@ -1,10 +1,11 @@
 {{#each sortedReviews as |review|}}
-  <p>{{review.name}}</p>
-  <p>{{review.title}}</p>
-  <p>{{review.content}}</p>
-  <p>{{review.rating}}</p>
-  <p>
-    {{review-stars review.rating}}
-  </p>
-  <p>{{moment-format date "L"}}</p>
+  <div class="comment">
+    <div class="comment-content">
+      <h1>{{review.name}}</h1>
+      <p>{{review.title}}</p>
+      <p>{{review.content}}</p>
+      <p>Rating: {{review-stars review.rating}}</p>
+      <p class="comment-detail">{{moment-format date "L"}}</p>
+    </div>
+  </div>
 {{/each}}

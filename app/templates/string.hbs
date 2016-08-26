@@ -1,21 +1,28 @@
-<h1>{{model.name}}</h1>
+<div class="string-detail">
+  <div class="">
+    <img src={{model.image}} alt={{model.name}} />
+  </div>
 
-<button {{action 'addToFavorites' model}}>Add to Favorite Strings</button>
+  <div class="">
+    <button {{action 'addToFavorites' model}}>Add to Favorite Strings</button>
+    <h1>{{model.name}}</h1>
+    <p>Brand: {{model.brand}}</p>
+    <p>Instrument: {{model.instrument}}</p>
+    <p>Winding: {{model.winding}}</p>
+    <p>Core: {{model.core}}</p>
+    <p>Size: {{model.size}}</p>
+    <p>Gauge: {{model.gauge}}</p>
+    <p>End Type: {{model.end}}</p>
+    <p>${{model.price}}</p>
+  </div>
+</div>
 
-
-{{review-tile reviews=model.reviews}}
-
-<!-- <div>
-  {{#each model.reviews as |review|}}
-    <p>
-      {{review.name}}
-    </p>
-    <p>
-      {{review.title}}
-    </p>
-    {{review-stars review}}
-    <hr>
-  {{/each}}
-</div> -->
-
-{{new-review save="save" string=model}}
+<div class="reviews-section">
+  <div class="review-comments">
+    <h2>Reviews</h2>
+    {{review-tile reviews=model.reviews}}
+  </div>
+  <div class="review-form">
+    {{new-review save="save" string=model}}
+  </div>
+</div>
