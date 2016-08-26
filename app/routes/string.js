@@ -18,7 +18,9 @@ export default Ember.Route.extend({
     },
 
     addToFavorites(string) {
+      console.log(string);
       this.get('favoriteStrings').add(string);
+      console.log(this.get('favoriteStrings.strings'));
     }
   }
 });
