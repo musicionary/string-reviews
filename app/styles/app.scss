@@ -4,3 +4,16 @@
 @import "navbar/index";
 @import "hero/index";
 @import "footer/index";
+
+.string-list {
+  display: flex;
+  flex-flow: row wrap;
+  img {
+    max-width: 400px;
+  }
+}
+
+.string-list > * {
+  flex-basis: 10em;
+  flex-grow: 1;
+}
