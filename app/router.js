@@ -7,6 +7,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('admin');
+  this.route('string', {path: '/string/:string_id'});
 });
 
 export default Router;
