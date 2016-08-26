@@ -1,1 +1,25 @@
-{{yield}}
+{{#if newReviewForm}}
+  <form>
+    <div class="">
+      <label for="name">Name</label>
+      {{input value=name id="name"}}
+    </div>
+    <div class="">
+      <label for="title">Title</label>
+      {{input value=title id="title"}}
+    </div>
+    <div class="">
+      <label for="content">What do you think about this string set?</label><br>
+      {{textarea cols="60" rows="8" value=content id="content"}}
+    </div>
+    <div class="">
+      <label for="rating">Rating(1-5)</label>
+      {{input type="number" value=rating id="rating"}}
+    </div>
+
+    <button {{action 'save' review}}>Add Review</button>
+  </form>
+{{else}}
+  <h2>review</h2>
+  <button {{action 'showReviewForm'}}>Add New Review</button>
+{{/if}}
