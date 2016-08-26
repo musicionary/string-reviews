@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  favoriteStrings: Ember.inject.service(),
   model(params) {
     return this.store.findRecord('string', params.string_id);
   },
@@ -14,6 +15,10 @@ export default Ember.Route.extend({
         return string.save();
       });
       this.transitionTo('string', params.string);
+    },
+
+    addToFavorites(string) {
+      this.get('favoriteStrings').add(string);
     }
   }
 });
