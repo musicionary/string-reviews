@@ -3,7 +3,12 @@
 @import "neat/neat";
 @import "navbar/index";
 @import "hero/index";
+@import "comments/index";
 @import "footer/index";
+
+.hero {
+  margin-bottom: 30px;
+}
 
 .string-list {
   display: flex;
@@ -16,4 +21,32 @@
 .string-list > * {
   flex-basis: 10em;
   flex-grow: 1;
+}
+
+.string-detail {
+  display: flex;
+  flex-flow: row wrap;
+  // img {
+  //   max-width: 400px;
+  // }
+}
+
+.string-detail > * {
+  flex-basis: 10em;
+  flex-grow: 1;
+}
+
+.reviews-section {
+  @include align-items(stretch);
+  @include display(flex);
+  @include flex-direction(row);
+  @include justify-content(flex-start);
+}
+
+.reviews-section > .review-comments {
+  @include flex(1);
+  margin-right: 20px;
+}
+.reviews-section > .review-form {
+  @include flex(1);
 }
