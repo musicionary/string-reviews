@@ -5,5 +5,6 @@ export default DS.Model.extend({
   date: DS.attr(),
   title: DS.attr(),
   content: DS.attr(),
-  rating: DS.attr()
+  rating: DS.attr(),
+  string: DS.belongsTo('string', {async: true})
 });

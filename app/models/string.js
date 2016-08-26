@@ -10,5 +10,6 @@ export default DS.Model.extend({
   gauge: DS.attr(),
   end: DS.attr(),
   price: DS.attr(),
-  image: DS.attr()
+  image: DS.attr(),
+  reviews: DS.hasMany('review', {async: true})
 });
