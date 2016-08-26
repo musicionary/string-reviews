@@ -1,5 +1,18 @@
 <h1>{{model.name}}</h1>
 
-{{review-tile string=model}}
+{{review-tile reviews=model.reviews}}
+
+<!-- <div>
+  {{#each model.reviews as |review|}}
+    <p>
+      {{review.name}}
+    </p>
+    <p>
+      {{review.title}}
+    </p>
+    {{review-stars review}}
+    <hr>
+  {{/each}}
+</div> -->
 
 {{new-review save="save" string=model}}
